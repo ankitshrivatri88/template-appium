@@ -1,8 +1,8 @@
 package calculator;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -35,5 +35,15 @@ public class calculatortest {
 
         driver = new AppiumDriver<MobileElement>(url, cap);
         System.out.println("App Started");
+
+        MobileElement two= driver.findElement(By.id("com.android.calculator2:id/digit_2"));
+        MobileElement plus= driver.findElement(By.id("com.android.calculator2:id/op_add"));
+        MobileElement three= driver.findElement(By.id("com.android.calculator2:id/digit_3"));
+        MobileElement equal= driver.findElement(By.id("com.android.calculator2:id/eq"));
+
+        two.click();
+        plus.click();
+        three.click();
+        equal.click();
     }
 }
